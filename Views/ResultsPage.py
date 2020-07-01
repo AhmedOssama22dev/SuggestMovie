@@ -1,5 +1,3 @@
-#this class to modify the html using attributes given
-
 from urllib.request import urlopen
 import webbrowser
 class results:
@@ -13,13 +11,14 @@ class results:
 		<head>
 			<title>results</title>
 		</head>
-		<body>
-			<h1>We recommend,{self.movie_name}</h1>
-			<p>
+		<body style="background:rgba(0,26,51,1)">
+			<h1 style="text-align:center;color:white">We suggest,</h1>
+			<p style="text-align:center;color:white;font-size:25"><em>{self.movie_name}</em></p>
+			<p style="text-align:center;font-size:20">
 				<img src='https://placebear.com/200/300' alt='This is the poster of {self.movie_name}'>
 			</p>
-			<p>
-			Year={self.year}<br>Rank={self.rank}<br><a href={self.link}>Check on IMBD</a>
+			<p style="text-align:center;color:white;font-size:20">
+			YEAR={self.year}<br>RANK ON IMDb:{self.rank}<br><a href={self.link}>Check on IMDb</a>
 			</p>
 		</body>
 		</html>
