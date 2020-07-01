@@ -3,9 +3,19 @@ import tkinter.font as tkFont
 from urllib.request import urlopen
 import webbrowser
 from ResultsPage import results
+from topMovieList import Data
+from randomMovie import Suggest
 
+movies_lst=list()
+suggested_movie=list()
+data=Data()
+data.fetch_data(movies_lst)
+suggest=Suggest()
+suggested_movie= suggest.randomize(movies_lst)
+
+#randomize(fetch_data) => returns a list from the movies_lst
 html=''
-results=results('Revenant','2015','4','www.bla.com',html)
+results=results(suggested_movie[1],suggested_movie[2],suggested_movie[0],'www.bla.com',html)
 
 class window(tk.Tk):
 	def __init__(self):
