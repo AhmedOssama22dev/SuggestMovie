@@ -3,7 +3,6 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import ssl
 import re
-l=list()
 class Data():
 	lst=list()
 	def fetch_data(self,lst):
