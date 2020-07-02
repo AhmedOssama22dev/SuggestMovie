@@ -30,4 +30,4 @@ class results:
 	def open_html(self):
 		new =2
 		url = "results.html"
-		webbrowser.open(url,new=new)
+		webbrowser.get().open(url,new=new)
