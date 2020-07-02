@@ -15,10 +15,10 @@ class results:
 			<h1 style="text-align:center;color:white">We suggest,</h1>
 			<p style="text-align:center;color:white;font-size:25"><em>{self.movie_name}</em></p>
 			<p style="text-align:center;font-size:20">
-				<img src='https://placebear.com/200/300' alt='This is the poster of {self.movie_name}'>
+				<img src='{self.link}' alt='This is the poster of {self.movie_name}' width="420" height="420">
 			</p>
 			<p style="text-align:center;color:white;font-size:20">
-			YEAR={self.year}<br>RANK ON IMDb:{self.rank}<br><a href={self.link}>Check on IMDb</a>
+			YEAR={self.year}<br>RANK ON IMDb:{self.rank}
 			</p>
 		</body>
 		</html>
