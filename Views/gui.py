@@ -5,7 +5,8 @@ import webbrowser
 from ResultsPage import results
 from topMovieList import Data
 from randomMovie import Suggest
-
+from Poster import Image
+#
 movies_lst=list()
 suggested_movie=list()
 data=Data()
@@ -13,9 +14,13 @@ data.fetch_data(movies_lst)
 suggest=Suggest()
 suggested_movie= suggest.randomize(movies_lst)
 
+images=dict()
+image=Image()
+images=image.fetch_image(images)
+print(images[suggested_movie[1]])
 #randomize(fetch_data) => returns a list from the movies_lst
 html=''
-results=results(suggested_movie[1],suggested_movie[2],suggested_movie[0],'www.bla.com',html)
+results=results(suggested_movie[1],suggested_movie[2],suggested_movie[0],images[suggested_movie[1]],html)
 
 class window(tk.Tk):
 	def __init__(self):
